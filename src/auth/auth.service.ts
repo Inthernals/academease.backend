@@ -106,7 +106,7 @@ export class AuthService {
     };
   }
 
-  async logout() {
+  async signout() {
     return {
       message: 'Successfully logged out!',
       statusCode: 200,
