@@ -71,11 +71,11 @@ export class AuthController {
     return { ...user, access_token: accessToken };
   }
 
-  @Delete('logout')
-  logout(@Res({ passthrough: true }) response: Response) {
+  @Delete('signout')
+  signout(@Res({ passthrough: true }) response: Response) {
     response.clearCookie('refreshTokenServer');
 
-    return this.authService.logout();
+    return this.authService.signout();
   }
 
   @UseGuards(RefreshTokenGuard)
